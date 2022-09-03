@@ -1,0 +1,24 @@
+## 1.IMAGE FILES:
+        All image files are stored in the 'images' folder. 
+        All these images have already been cropped to contain only the lip region with the process described 
+            in our paper. (https://arxiv.org/pdf/1810.06990.pdf)
+        
+## 2. AUDIO FILES
+        Audio files are stored in the "audio" folder.
+        Each audio is cropped with the actual word in the cecnter and extra 200ms temporal expansion 
+            before and after the word respectively to faciliate some further data augmentation operations.
+        
+## 3. TEXT FILES
+        Textual Annotation files are stored in the 'info' folder, with the name 'trn' for train, 'tst' for test and
+            'val' for validation. 
+        Data in different difficulty levels divided by different attributes are listed in the three folders named 
+            "Pose", "Resolution", and "Length" with files including the keyword "easy", "medium" and "hard".   
+        Each column in the txt files is as follows:
+            Image_Folder_Name, 
+            Audio_Folder_Name (optional),
+            Class_Name in the format of Chinese_characters, 
+            Class_Name in the format of Chinese_PinYin (composed by English alphabet), 
+            Start_Time of the word (#seconds),
+            End_Time of the word (#seconds). 
+        Note: All the videos in the dataset are 25 fps and so the start/end frame-index of each word is corresponding 
+        to the product result of start/end time and 25.        
